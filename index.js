@@ -1,24 +1,17 @@
-
-function receivesAFunction(callback){
-    callback;
-    const spy = chai.spy();
-    const chai = require("chai");
-
-      receivesAFunction(spy);
-     
-
+function receivesAFunction(callback) {
+    callback(); // call the callback function
+  }
+function myCallBack() {
+    Return `Hello World`;
 }
-function ourCallBack(){
-    return "hey you"
-}
-receivesAFunction(ourCallBack);
-function returnsANamedFunction(){
-    return function namesd(){
-        console.log('Am a named function!');
+receivesAFunction(myCallBack);
+function returnsANamedFunction() {
+    return function named() {
+        console.log(`Am a named function!`);
     }
 }
-function returnsAnAnonymousFunction(){
-    return function(){}
+function returnsAnAnonymousFunction() {
+    return function() {}
 }
 
 
